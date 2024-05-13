@@ -2083,7 +2083,7 @@ body {
 }
 
 h1, h2, h3, h4, h5 {
-    color: #282829;
+    color: #270054;
     font-weight: 200;
 }
 
@@ -2103,7 +2103,7 @@ a:hover {
 }
 
 h2 a {
-    color: #1372ec;
+    color: #270054;
 }
 
 .container {
@@ -2337,7 +2337,7 @@ h2 a {
     border-radius: 4px;
     font-size: 0.8em;
     border: 2px solid #333357;
-    border-radius: 3px;
+    border-radius: 20px;
     color: #333357;
     transition: 0.2s ease all;
 }
@@ -2445,8 +2445,12 @@ article .social > div {
 }
 
 .container .single .title{
-    color:#282829;
-    margin: 0 0 10px 0;
+    color:#270054;
+    margin: 30px 0 10px 0;
+    font-size: 48px;
+}
+.container .single  .post_content{
+ display:block;
 }
 .container.single .meta{
     margin-bottom: 50px;
@@ -2574,6 +2578,14 @@ article .meta {
     font-size: 14px;
 }
 
+article .post_content {
+    color: #282829;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
 article .meta time, article .meta address {
     display: inline;
     font-size: 13px
@@ -2591,8 +2603,6 @@ article img {
 
 article .title {
     margin: 0.2em 0;
-    
-    font-weight: 200;
     font-size: 32px;
 }
 
