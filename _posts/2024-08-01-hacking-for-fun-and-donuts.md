@@ -12,7 +12,6 @@ author:
 
 ---
 
-
 For this year’s CTF, one of the challenge was to donut me (@Cedric Brisson) and/or phish my credentials. For a hefty 300pts + some donuts, our one and only @Andre Theriault managed to win this challenge.
 
 But how do you trick a security freak into getting donuted? Simple put, social engineering and a bit of tech wizardry.
@@ -20,29 +19,30 @@ But how do you trick a security freak into getting donuted? Simple put, social e
 The technical part
 To better understand what actually happened, it’s important to do a quick dive into how André achieved this from a technical perspective.
 
+# What's a CTF?
+
+// TODO: Fill in What's a CTF
+
+
+
 # NorthSec in a nutshell 
  
 To put it simply, NorthSec is one of the largest Canadian cybersecurity event hosted annually in Montreal. It’s known for a few things such as it’s technical talks, it’s workshops but most importantly, it’s CTF. It’s an event where a bunch of nerds group up and share information about cybersecurity. The talks ranges from stuff like “Under the Radar: How we found 0-days in the Build Pipeline of OSS Packages” to “Insert coin: Hacking arcades for fun”. Beyond its technical focus, NorthSec offers great networking opportunities in a vibrant setting, making it a must-attend for anyone serious about staying at the forefront of cybersecurity innovation and skill development.
 
 But why are we talking about this? Well because this year, I happened to not attend the CTF but André did. Each year, NorthSec has 2 badges. One of the conferences and one for the CTF. This year was different however, there was only one badge but those attending the competition would get it flashed with a special software.
 
- 
+![NorthSec 2024 conference & CTF badge](/images/2024-08-01-hacking-for-fun-and-donuts/badge-with-cover.png)
 
-// TODO: ADD PIC OF BADGE
 This year’s NorthSec badge
 This year’s badge offered a few features. One thing that is recurrent every year is that it’s essentially made to be a social tool. You plug your badge into someone else’s badge to gain points that enable new animations. The “syncing” of the badges typically takes a few minutes which forces you to talk to people a bit a meet new friends. We managed to get a pretty long chain too! Linking with more badges at once would essentially activate a “point multiplier”.
 
- 
-
-// TODO: ADD PIC OF BADGE CHAIN
+![NorthSec 2024 conference & CTF badge chain](/images/2024-08-01-hacking-for-fun-and-donuts/badge-chain.jpg) 
 
 # The ESP32 
  
 But how does the badge work? Well, it uses a chip called an ESP32. In essence, it’s essentially a small chip that’s easily programmable which offers a few features such as Bluetooth and WIFI capabilities. One of the key things it offers is being able to be reprogrammed. This will be important later on :wink:.
 
- 
-
-// TODO: ADD CLOSEUP OF BADGE
+![Northsec 2024 conference & CTF parts](/images/2024-08-01-hacking-for-fun-and-donuts/uncovered-badge.png)
 
 It was also connected to the following which were key to the exploit:
 
@@ -57,7 +57,7 @@ Now that we understand the technical background of the exploit, let’s dive int
 
 André knows I’m an avid CTF player. Knowing I couldn’t participate at this year’s edition, he offered me to lend me his badge so I could dump the firmware and start reverse engineering it to see if I couldn’t get a flag or two.
 
-// TODO: ADD PIC OF CONVERSATION
+![Conversation between me and the person who pwned me](/images/2024-08-01-hacking-for-fun-and-donuts/conversation-1.png)
 
 What I thought was a kind offer ended up being my downfall. André had found a way to get me to plug something in my computer without doubting it’s legitimacy. He leveraged a passion of mine against me. This is exactly what social engineering is all about; leveraging human flaws to attain a goal the person would normally not go along with.
 
@@ -124,7 +124,7 @@ Upon getting my hands on the badge, my first instinct was to directly plug the b
 
 This gave André a chance to sneak up next to me and “just start looking at my badge”. To my surprise, the dump suddenly stopped and I thought it was because the USB connector had made a bad contact or something. Turns out André had sneakily pushed the reset button putting the badge into it’s malicious state which executed the code.
 
-// TODO: ADD PIC OF DONUT MESSAGE
+![Message "I" posted that confirmed the exploit](/images/2024-08-01-hacking-for-fun-and-donuts/donut-message.png)
 
 And just like that, I owed a few boxes of Donuts and André won 300pts🍩
 
